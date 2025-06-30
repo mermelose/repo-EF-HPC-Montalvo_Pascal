@@ -11,3 +11,5 @@ def calcular_multiplicacion(l):
     for i in l:
         m = m*i
     return m
+if __name__ == '__main__':
+    print(calcular_factorial(10))
