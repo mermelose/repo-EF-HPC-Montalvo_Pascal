@@ -12,4 +12,9 @@ def calcular_multiplicacion(l):
         m = m*i
     return m
 if __name__ == '__main__':
-    print(calcular_factorial(10))
+    p1 = Process(target=calcular_factorial,args=(10,))
+    p2 = Process(target=calcular_multiplicacion,args=([2,4,6,10,5],))
+    p1.start()
+    p2.start()
+    p1.join()
+    p2.join()
